@@ -42,8 +42,20 @@ app.post("/api/goodsList", function(req, res) {
 		})
 	})
 })
+app.post("/api/column_1", function(req, res) {
+	fs.readFile("src/assets/goodsOneList.json", function(err, data) {
+		if(err) {
+			return console.error(err);
+		}
+		var txt = data.toString();
+		var obj = JSON.parse(txt);
+		res.json({
+			data: obj
+		})
+	})
+})
 
-app.post("/api/column", function(req, res) {
+app.post("/api/column_2", function(req, res) {
 	fs.readFile("src/assets/goodsTwoList.json", function(err, data) {
 		if(err) {
 			return console.error(err);
