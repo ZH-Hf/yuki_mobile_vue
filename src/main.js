@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+	import axios from "axios";
 //import myFooter from './components/myFooter'
 Vue.config.productionTip = false
 
@@ -10,8 +11,6 @@ Vue.config.productionTip = false
 import wcSwiper from 'wc-swiper'
 import 'wc-swiper/style.css'
 Vue.use(wcSwiper);
-
-
 
 /* eslint-disable no-new */
 
@@ -21,6 +20,9 @@ new Vue({
 	template: '<App/>',
 	components: {
 		App
+	},
+	data:{
+		goodsData:{}
 	},
 	created() {
 		(function() {

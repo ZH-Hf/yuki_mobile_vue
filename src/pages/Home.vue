@@ -7,7 +7,7 @@
 			</wc-slide>
 		</wc-swiper>
 		<recommend tit="新品推荐" />
-		<new-goods />
+		<new-goods/>
 		<aside></aside>
 		<recommend tit="人气推荐" />
 		<pop-Goods/>

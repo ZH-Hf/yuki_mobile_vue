@@ -12,28 +12,24 @@
 </template>
 
 <script>
+	import axios from "axios";
+
 	export default {
+		created() {
+			this.getData(this);
+		},
+		methods: {
+			getData(_this) {
+				axios.post("/api/goodsList").then(function(res) {
+					const data = res.data.data.popularGoodBeanList;
+					_this.poplar_goods = data;
+				})
+			}
+
+		},
 		data() {
 			return {
-				poplar_goods: [{
-					"goodId": 385,
-					"goodName": "Apple/苹果 12 英寸 MacBook",
-					"goodPicUrl": "http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170606150447823871.JPEG",
-					"goodSecondName": "",
-					"goodMinPrice": 849900
-				}, {
-					"goodId": 333,
-					"goodName": "埃罗芒阿老师我的妹妹是黄漫和泉沙雾COSt恤短袖夏装上衣服女",
-					"goodPicUrl": "http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170602151837138997.JPEG",
-					"goodSecondName": "",
-					"goodMinPrice": 5900
-				}, {
-					"goodId": 807,
-					"goodName": "Yuki原创T恤保卫星球男女卡通情侣",
-					"goodPicUrl": "http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170823154935509512.JPEG",
-					"goodSecondName": "",
-					"goodMinPrice": 3800
-				}]
+				poplar_goods: []
 			}
 		}
 	}
@@ -76,7 +72,6 @@
 		color: #e54560;
 		margin-top: 30px;
 	}
-	
 	
 	.pop_goods .icon {
 		margin-top: 27px;

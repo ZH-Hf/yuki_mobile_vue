@@ -5,17 +5,12 @@
 </template>
 
 <script>
-	import axios from "axios";
 	export default {
-		mounted() {
+		name: 'app',
+		data(){
 			
-			console.log(axios);
-			axios.post("/api/address").then(function(res) {
-				console.log(res);
-			})
-		},
-		name: 'app'
-
+			return {}
+		}
 	}
 </script>
 

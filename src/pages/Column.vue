@@ -1,16 +1,19 @@
 <template>
 	<div>
+		<search></search>
 		Column
-		<!--<my-footer/>-->
+		<my-footer/>
 	</div>
 
 </template>
 
 <script>
 	import myFooter from '../components/myFooter'
+	import search from '../components/long_search'
 	export default {
 		components:{
-			myFooter
+			myFooter,
+			search
 		},
 		data() {
 			return {}

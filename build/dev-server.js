@@ -2,15 +2,15 @@
 require('./check-versions')()
 
 const config = require('../config')
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
+if(!process.env.NODE_ENV) {
+	process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 
 const opn = require('opn')
 const path = require('path')
 const express = require('express')
 const webpack = require('webpack')
-const fs = require("fs");
+const fs = require("fs")
 const proxyMiddleware = require('http-proxy-middleware')
 const webpackConfig = require('./webpack.dev.conf')
 
@@ -23,8 +23,9 @@ const autoOpenBrowser = !!config.dev.autoOpenBrowser
 const proxyTable = config.dev.proxyTable
 
 const app = express()
-app.post("/api/address", function(req, res) {
-	fs.readFile("../src/assets/address.json", function(err, data) {
+//ajax-----------------------------------------------------------------------
+app.post("/api/goodsList", function(req, res) {
+	fs.readFile("src/assets/goodsList.json", function(err, data) {
 		if(err) {
 			return console.error(err);
 		}
@@ -34,25 +35,18 @@ app.post("/api/address", function(req, res) {
 			data: obj
 		})
 	})
-
 })
-
-//ajax-----------------------------------------------------------------------
-app.post("/api/goodsList",function(req,res){
-	res.json({msg:1});
-})
-
 
 const compiler = webpack(webpackConfig)
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
-  publicPath: webpackConfig.output.publicPath,
-  quiet: true
+	publicPath: webpackConfig.output.publicPath,
+	quiet: true
 })
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
-  log: false,
-  heartbeat: 2000
+	log: false,
+	heartbeat: 2000
 })
 // force page reload when html-webpack-plugin template changes
 // currently disabled until this is resolved:
@@ -69,12 +63,14 @@ const hotMiddleware = require('webpack-hot-middleware')(compiler, {
 app.use(hotMiddleware)
 
 // proxy api requests--------------------------------------------------------
-Object.keys(proxyTable).forEach(function (context) {
-  let options = proxyTable[context]
-  if (typeof options === 'string') {
-    options = { target: options }
-  }
-  app.use(proxyMiddleware(options.filter || context, options))
+Object.keys(proxyTable).forEach(function(context) {
+	let options = proxyTable[context]
+	if(typeof options === 'string') {
+		options = {
+			target: options
+		}
+	}
+	app.use(proxyMiddleware(options.filter || context, options))
 })
 
 // handle fallback for HTML5 history API
@@ -92,8 +88,8 @@ const uri = 'http://localhostss:' + port
 var _resolve
 var _reject
 var readyPromise = new Promise((resolve, reject) => {
-  _resolve = resolve
-  _reject = reject
+	_resolve = resolve
+	_reject = reject
 })
 
 var server
@@ -102,25 +98,25 @@ portfinder.basePort = port
 
 console.log('> Starting dev server...')
 devMiddleware.waitUntilValid(() => {
-  portfinder.getPort((err, port) => {
-    if (err) {
-      _reject(err)
-    }
-    process.env.PORT = port
-    var uri = 'http://localhost:' + port
-    console.log('> Listening at ' + uri + '\n')
-    // when env is testing, don't need open it
-    if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
-      opn(uri)
-    }
-    server = app.listen(port)
-    _resolve()
-  })
+	portfinder.getPort((err, port) => {
+		if(err) {
+			_reject(err)
+		}
+		process.env.PORT = port
+		var uri = 'http://localhost:' + port
+		console.log('> Listening at ' + uri + '\n')
+		// when env is testing, don't need open it
+		if(autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
+			opn(uri)
+		}
+		server = app.listen(port)
+		_resolve()
+	})
 })
 
 module.exports = {
-  ready: readyPromise,
-  close: () => {
-    server.close()
-  }
+	ready: readyPromise,
+	close: () => {
+		server.close()
+	}
 }
