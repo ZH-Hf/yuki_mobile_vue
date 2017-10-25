@@ -13,13 +13,7 @@
 </script>
 
 <style>
-	html{
-		
-	}
-	*{
-		margin: 0;
-		padding: 0;
-	}
+	
 	.long_search{
 		width: 292px;
 		height: 29px;
@@ -36,8 +30,5 @@
 		background-size: 15px 15px;
 		background-color: #ebebeb;
 		padding-left: 96px;
-	}
-	#app{
-		margin: 0;
 	}
 </style>

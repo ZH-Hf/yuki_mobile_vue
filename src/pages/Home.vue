@@ -54,4 +54,10 @@
 		height: 0.2rem;
 		background: #f0f0f0;
 	}
+	
+	.lunbo img {
+		float: left;
+		width: 7.5rem;
+		height: 4.2rem;
+	}
 </style>

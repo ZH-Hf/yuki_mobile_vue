@@ -26,10 +26,8 @@
 <style>
 	.header {
 		width: 100%;
-		position: fixed;
 		top: 0;
 		background: #ffffff;
-		z-index: 99;
 	}
 	
 	.header-nav {
