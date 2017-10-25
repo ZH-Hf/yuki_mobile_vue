@@ -1,6 +1,7 @@
 'use strict'
 require('./check-versions')()
-
+var querystring = require("querystring");
+var bodyParser = require('body-parser'); //作为express的插件
 const config = require('../config')
 if(!process.env.NODE_ENV) {
 	process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
@@ -23,6 +24,11 @@ const autoOpenBrowser = !!config.dev.autoOpenBrowser
 const proxyTable = config.dev.proxyTable
 
 const app = express()
+app.use(bodyParser.json()) //告诉express你使用了插件
+app.use(bodyParser.urlencoded({
+
+	extended: true
+})) //处理通过表单提交的数据，放到req对象上面去了
 //ajax-----------------------------------------------------------------------
 app.post("/api/goodsList", function(req, res) {
 	fs.readFile("src/assets/goodsList.json", function(err, data) {
@@ -33,6 +39,20 @@ app.post("/api/goodsList", function(req, res) {
 		var obj = JSON.parse(txt);
 		res.json({
 			data: obj
+		})
+	})
+})
+
+app.post("/api/column", function(req, res) {
+	fs.readFile("src/assets/goodsTwoList.json", function(err, data) {
+		if(err) {
+			return console.error(err);
+		}
+		var txt = data.toString();
+		var obj = JSON.parse(txt);
+		var typeId = req.body.typeId;
+		res.json({
+			data: obj[typeId]
 		})
 	})
 })

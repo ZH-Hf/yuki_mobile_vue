@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<search></search>
-		Column
+		<goodsOneList/>
 		<my-footer/>
 	</div>
 
@@ -10,10 +10,11 @@
 <script>
 	import myFooter from '../components/myFooter'
 	import search from '../components/long_search'
+	import goodsOneList from '../components/column_list'
 	export default {
 		components:{
 			myFooter,
-			search
+			search,goodsOneList
 		},
 		data() {
 			return {}

@@ -23,7 +23,7 @@
 	.long_search{
 		width: 292px;
 		height: 29px;
-		margin: 4px 0 0 14px;
+		margin: 4px 0 5px 14px;
 	}
 	.long_search input{
 		box-sizing: border-box;
