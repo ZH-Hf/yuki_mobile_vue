@@ -7,6 +7,7 @@
 				<img :src="slide.imgSrc" />
 			</wc-slide>
 		</wc-swiper>
+		
 		<recommend tit="新品推荐" />
 		<new-goods/>
 		<aside></aside>

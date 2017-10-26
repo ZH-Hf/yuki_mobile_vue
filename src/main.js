@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-	import axios from "axios";
+import axios from "axios";
 //import myFooter from './components/myFooter'
 Vue.config.productionTip = false
 
@@ -21,28 +21,19 @@ new Vue({
 	components: {
 		App
 	},
-	data:{
-		goodsData:{}
+	data: {
+		goodsData: {}
 	},
 	created() {
 		(function() {
-
 			var docEl = document.documentElement;
-
 			var resize = 'orientationchange' in window ? 'orientationchange' : 'resize';
-
 			var setRem = function() {
-
 				var screenWidth = docEl.clientWidth || window.screen.width || 360;
-
 				docEl.style.fontSize = (100 * screenWidth / 750) + 'px';
-
 			};
-
 			window.addEventListener('resize', setRem, false);
-
 			setRem();
-
 		})();
 	}
 })

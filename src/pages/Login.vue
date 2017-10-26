@@ -39,7 +39,7 @@
 	}
 	
 	.login_box input {
-		padding-top: 0.4rem;
+		margin-top: 0.4rem;
 		width: 100%;
 		height: 0.6rem;
 		font-size: 0.28rem;

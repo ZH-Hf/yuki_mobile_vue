@@ -5,13 +5,14 @@ import Column from '@/pages/Column'
 import Bag from '@/pages/Bag'
 import My from '@/pages/My'
 import Login from '@/pages/Login'
+import Register from '@/pages/Register'
 
 Vue.use(Router)
 export default new Router({
 	routes: [{
 			path: '/',
 			name: 'Hello',
-			redirect: "/home"
+			component: Home,
 		},
 		{
 			path: '/home',
@@ -37,6 +38,11 @@ export default new Router({
 			path: '/login',
 			name: 'login',
 			component: Login,
+		},
+		{
+			path: '/register',
+			name: 'register',
+			component: Register,
 		}
 	]
 })

@@ -32,6 +32,9 @@
 </script>
 
 <style scoped>
+	::-webkit-scrollbar{
+  display:none;
+}
 	.goods_list {
 		list-style: none;
 		display: flex;
@@ -44,7 +47,7 @@
 	
 	.goods_list li {
 		float: left;
-		height: 4.5rem !important;
+		height:161px !important;
 	}
 	
 	.goods_list li img {
