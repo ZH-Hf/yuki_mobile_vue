@@ -28,6 +28,8 @@
 		width: 100%;
 		top: 0;
 		background: #ffffff;
+		position: fixed;
+		z-index: 99;
 	}
 	
 	.header-nav {

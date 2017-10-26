@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<blank></blank>
 		<my-header/>
 		<wc-swiper class="lunbo">
 			<wc-slide v-for="(slide, key) in slides" :key="key">
@@ -13,7 +14,9 @@
 		<pop-Goods/>
 		<guess-goods/>
 		<my-footer/>
+		<blank></blank>
 	</div>
+	
 
 </template>
 
@@ -24,6 +27,7 @@
 	import newGoods from '../components/goods-list-swiper'
 	import popGoods from '../components/poplar-goods-list'
 	import guessGoods from '../components/guess_goods'
+	import blank from '../components/blank'
 	export default {
 		components: {
 			myFooter,
@@ -31,7 +35,8 @@
 			recommend,
 			newGoods,
 			popGoods,
-			guessGoods
+			guessGoods,
+			blank
 		},
 		data() {
 			return {

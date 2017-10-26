@@ -58,6 +58,7 @@
 		border-right: 1px solid #d9d9d9;
 		padding-top: 40px;
 		float: left;
+		text-align: center;
 	}
 	
 	.goodsOneList li {
@@ -71,6 +72,8 @@
 		float: left;
 		width: 220px;
 		margin: 20px 17px 0 17px;
+		text-align: center;
+		
 	}
 	
 	.goodsTwoList li {

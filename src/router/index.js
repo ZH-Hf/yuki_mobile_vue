@@ -4,6 +4,7 @@ import Home from '@/pages/Home'
 import Column from '@/pages/Column'
 import Bag from '@/pages/Bag'
 import My from '@/pages/My'
+import Login from '@/pages/Login'
 
 Vue.use(Router)
 export default new Router({
@@ -31,6 +32,11 @@ export default new Router({
 			path: '/my',
 			name: 'my',
 			component: My,
+		},
+		{
+			path: '/login',
+			name: 'login',
+			component: Login,
 		}
 	]
 })

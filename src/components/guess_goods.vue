@@ -38,7 +38,6 @@
 
 <style>
 	.guess {
-		float: left;
 		background: #f0f0f0;
 	}
 	
@@ -48,7 +47,9 @@
 		background: #f0f0f0;
 		line-height: 40px;
 	}
-	
+	.guess_goods{
+		overflow: hidden;
+	}
 	.guess_goods li {
 		float: left;
 		width: 147px;
