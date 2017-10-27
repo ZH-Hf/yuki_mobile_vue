@@ -38,7 +38,7 @@
 		methods: {
 			change() {
 				this.active = !this.active;
-				console.log(this.active)
+				console.log(this.$route)
 			}
 		},
 		data() {
@@ -107,7 +107,7 @@
 	
 	.goodInfo p {
 		margin-top: 4px;
-		width: 179px;
+		width: 170px;
 		float: left;
 		font-size: 0.28rem;
 		color: #333;
