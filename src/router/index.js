@@ -6,6 +6,7 @@ import Bag from '@/pages/Bag'
 import My from '@/pages/My'
 import Login from '@/pages/Login'
 import Register from '@/pages/Register'
+import GoodDetail from '@/pages/GoodDetail'
 
 Vue.use(Router)
 export default new Router({
@@ -43,6 +44,11 @@ export default new Router({
 			path: '/register',
 			name: 'register',
 			component: Register,
+		},
+		{
+			path: '/good_detail',
+			name: 'good_detail',
+			component: GoodDetail,
 		}
 	]
 })

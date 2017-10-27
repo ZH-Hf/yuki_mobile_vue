@@ -2,7 +2,6 @@
 	<div class="register">
 		<div class="reg_header">
 			<router-link to="login"><div class="prev_icon"></div></router-link>
-			
 			<p>注册</p>
 		</div>
 		<aside></aside>

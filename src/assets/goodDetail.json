@@ -1,0 +1,78 @@
+{
+	"data": {
+		"onSale": true,
+		"orderSale": "全场满98减8 满198减18",
+		"goodDetailBean": {
+			"goodid": 777,
+			"goodName": "正版散货眼镜厂海贼航海王艾斯蹲姿艺术王者公仔KOA组立景品手办",
+			"goodSecondName": "",
+			"goodTag": "新品特惠",
+			"goodPicUrl": "http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114040955.JPEG",
+			"propertyList": [
+				{
+					"propertyid": 951,
+					"propertyName": "款式",
+					"valueList": [
+						{
+							"valueid": 3152,
+							"valueName": "原版"
+						}, {
+							"valueid": 3153,
+							"valueName": "异色限量版"
+						}, {
+							"valueid": 3154,
+							"valueName": "绿色特别版"
+						}, {
+							"valueid": 3155,
+							"valueName": "全套3款"
+						}
+					]
+				}
+			],
+			"skuList": [
+				{
+					"skuid": 3052,
+					"skuidText": "951:3152/",
+					"skuPic": "http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114448870.JPEG",
+					"stockNum": 4,
+					"nowPrice": 9500,
+					"oldPrice": 0,
+					"skuDesc": "款式:原版 "
+				}, {
+					"skuid": 3053,
+					"skuidText": "951:3153/",
+					"skuPic": "http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114553111.JPEG",
+					"stockNum": 5,
+					"nowPrice": 9500,
+					"oldPrice": 0,
+					"skuDesc": "款式:异色限量版 "
+				}, {
+					"skuid": 3054,
+					"skuidText": "951:3154/",
+					"skuPic": "http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114599420.JPEG",
+					"stockNum": 5,
+					"nowPrice": 9500,
+					"oldPrice": 0,
+					"skuDesc": "款式:绿色特别版 "
+				}, {
+					"skuid": 3055,
+					"skuidText": "951:3155/",
+					"skuPic": "http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114040955.JPEG",
+					"stockNum": 5,
+					"nowPrice": 27000,
+					"oldPrice": 0,
+					"skuDesc": "款式:全套3款 "
+				}
+			],
+			"picList": [
+				"http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114040955.JPEG",
+				"http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114553111.JPEG",
+				"http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114448870.JPEG",
+				"http://yukicomic-pic.oss-cn-hangzhou.aliyuncs.com/gooddetailimg_20170627110114599420.JPEG"
+			],
+			"goodDescUrl": "http://m.yukicomic.com:8084/h5/h5good/findGoodDetailH5Page/777",
+			"userCollectionState": false
+		},
+		"state": "success"
+	}
+}

@@ -42,6 +42,18 @@ app.post("/api/goodsList", function(req, res) {
 		})
 	})
 })
+app.post("/api/goodDetail", function(req, res) {
+	fs.readFile("src/assets/goodDetail.json", function(err, data) {
+		if(err) {
+			return console.error(err);
+		}
+		var txt = data.toString();
+		var obj = JSON.parse(txt);
+		res.json({
+			data: obj
+		})
+	})
+})
 app.post("/api/column_1", function(req, res) {
 	fs.readFile("src/assets/goodsOneList.json", function(err, data) {
 		if(err) {

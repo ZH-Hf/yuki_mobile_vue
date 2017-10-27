@@ -45,6 +45,7 @@
 		height: 40px;
 		font-size: 0.32rem;
 		background: #f0f0f0;
+		text-align: center;
 		line-height: 40px;
 	}
 	.guess_goods{

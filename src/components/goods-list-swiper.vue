@@ -1,9 +1,10 @@
 <template>
 	<ul class="goods_list">
 		<li v-for="item in goodsList" :key="item.goodId">
-			<img :src="item.goodPicUrl" :alt="item.goodName" class="goods_img" />
+			
+			<router-link to="good_detail"><img :src="item.goodPicUrl" :alt="item.goodName" class="goods_img" />
 			<p class="goods_name">{{item.goodName}}</p>
-			<p class="goods_price">¥{{item.goodMinPrice/100}}</p>
+			<p class="goods_price">¥{{item.goodMinPrice/100}}</p></router-link>
 		</li>
 	</ul>
 </template>
@@ -32,9 +33,10 @@
 </script>
 
 <style scoped>
-	::-webkit-scrollbar{
-  display:none;
-}
+	::-webkit-scrollbar {
+		display: none;
+	}
+	
 	.goods_list {
 		list-style: none;
 		display: flex;
@@ -47,7 +49,7 @@
 	
 	.goods_list li {
 		float: left;
-		height:161px !important;
+		height: 161px !important;
 	}
 	
 	.goods_list li img {
